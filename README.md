@@ -1,4 +1,3 @@
-# lotide
 # Lotide
 
 A mini clone of the [Lodash](https://lodash.com) library.
@@ -13,12 +12,12 @@ This project was created and published by me as part of my learnings at Lighthou
 
 **Install it:**
 
-`npm install @kershia1/lotide`
+`npm install @Kershia1/lotide`
 
 **Require it:**
 
 `function
- _ = require('@kershia1/lotide');`
+ _ = require('@Kershia1/lotide');`
 
 **Call it:**
 

@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@d.ingram/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lotide",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Kershia1/lotide.git"
   },
-  "author": "",
+  "author": "Desiree Ingram",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Kershia1/lotide/issues"
