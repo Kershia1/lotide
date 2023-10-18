@@ -1,23 +1,6 @@
 //test to determine if given arrays are equal or not
-
-const eqArrays = (a, b) => //set 2 vars, resuable to loop any arrs :) 
-  a.length === b.length && a.every((element, index) => element === b[index]);
-
-const eqObjects = function (object1, object2) {
-  for (obj1 in object1) { //iterate through object1, 
-    for (obj2 in object2) { //iterate through object2, 
-      if (Array.isArray(object1[obj1]) && Array.isArray(object2[obj2])) { //if keys are absolutely the same, and both are arrays
-        if (!eqArrays(object1[obj1], object2[obj2])) { //if values are the same
-          return false; //return false if values are not the same 
-        } else { 
-          console.log(`Assertion Failed: ${actual} !== ${expected} 😿`); //if objects are not equal, log this
-          return false; //return false if values are not the same
-        }
-      }
-    }
-  }
-  return true; // return true if values are the same,
-};
+const eqArrays = require('./eqArrays'); 
+const eqObjects = require('./eqObjects');
 
 // Test to compare objects if they are absolutely equal or not.
 const assertObjectsEqual = function (actual, expected) { // generic test of objects

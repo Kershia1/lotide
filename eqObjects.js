@@ -38,3 +38,5 @@ assertEqual(eqObjects(shirtObject, anotherShirtObject), true); // => should PASS
 //Test Code
 console.log(eqObjects(shirtObject, anotherShirtObject)); // => true
 console.log(eqObjects(shirtObject, longSleeveShirtObject)); // => false
+
+module.exports = eqObjects;

@@ -1,4 +1,4 @@
-const assertEqual = require('../..lotide/assertEqual');
+const assertEqual = require('../assertEqual');
 
 // Test values
 // parameter a

@@ -1,8 +1,8 @@
 const assert = require('chai').assert; 
-const tail = require('../../tail'); 
+const tail = require('../tail'); 
 
 //pass
-describe('tail', function () {
+describe('#tail', function () {
   it('should return ["Lighthouse", "Labs"] from input ["Hello", "Lighthouse", "Labs"]', function () {
     const input = ["Hello", "Lighthouse", "Labs"];
     const output = ["Lighthouse", "Labs"];

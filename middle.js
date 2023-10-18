@@ -1,5 +1,5 @@
-const assertArraysEqual = require('./lotide/assertArraysEqual');
-const middleTest = require('./lotide/test/middleTest');
+const assertArraysEqual = require('./assertArraysEqual');
+const middleTest = require('./middleTest');
 
 //Step 2 Middle will use Math.floor(arr.length /2); find the exact middle by finding the excat integer and rounding down
 let arr = [1,2,3,4];

@@ -12,3 +12,5 @@ const assertEqual = function(actual, expected) { // testing 1st cond is t/f
 // Test values 
 const result = tail(["Hello", "Lighthouse", "Labs"]); //
 assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
+
+module.exports = tail;

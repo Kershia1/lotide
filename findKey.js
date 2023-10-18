@@ -1,26 +1,44 @@
-const assertEqual = function (actual, expected) { // testing 1st cond is t/f
-  if (actual === expected) {
-    console.log(`Assertion Passed: ${actual} === ${expected} ✅`)
- }else{ //( actual !== expected), unecessary rep
-    console.log(`Assertion Failed: ${actual} !== ${expected} 😿`)}
-  };
-// try generic obj and values?
-  const findKeyByValue = function(bestTVShowsByGenre, values) { // not defined
-    for (let key in values ) { // iterate obj
-      if (bestTVShowsByGenre[key] === values) { // if value is equal to values
-        return key; // return key
-      }
+const assertEqual = require('./assertEqual');
+
+//define function and create callback
+function findKey(object, callback) {
+  for ( key in object) { // look inside object
+    if(object.hasOwnProperty(key) && callback(object[key])) { //are there keys
+      return key; //if there are return
     }
-    return undefined; // else return undefined
-  };
+  }
+  return undefined; //if not nothing to return
+};
 
-  const bestTVShowsByGenre = { 
-    sci_fi: "The Expanse",
-    comedy: "Brooklyn Nine-Nine",
-    drama:  "The Wire"
-  };
+// console.log(findKey);
 
-  console.log(Object.keys(bestTVShowsByGenre)); 
+  const result = findKey({
+  "Blue Hill": { stars: 1 },
+  "Akaleri":   { stars: 3 },
+  "noma":      { stars: 2 },
+  "elBulli":   { stars: 3 },
+  "Ora":       { stars: 2 },
+  "Akelarre":  { stars: 3 }
+}, x => x.stars === 2) // => "noma"
+
+const callback = (x) => {
+  return (result, callback)
+};
+
+assertEqual(findKey(result, "noma"), "noma"); // "noma"
   
-  assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-  assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+const testObject = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4
+}; 
+
+function oddity(test) { 
+  return test % 1 === 0;
+}
+
+const results = findKey(testObject,oddity); 
+console.log(results); // 1st odd value found is 1 returns a. 
+
+  module.exports = findKey;

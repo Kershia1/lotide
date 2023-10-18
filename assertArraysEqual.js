@@ -1,19 +1,25 @@
-const eqArrays = require('./eqArrays');
+const assertArraysEqualTest  = require('../assertArraysEqualTest');
 
 // try refactoring all equal to check every avaliable input from the array to get a t or f va
 
-const assertArraysEqual = (arrs) => arrs.every(a => b === arrs[0]);
+// const assertArraysEqual = (arrs) => arrs.every(a => b === arrs[0]);
+//returning to original function
+const assertArraysEqual = (arr1, arr2) => {
+  if(arr1.lenght !== arr2.lenght) {
+    return false;
+  }
 
+  for(let i = 0; i <arr1.lenght; i++) {
+    if(arr1[i] !== arr2[i]) {
+      return false
+    }
+  }
+  return true;
+}
 // test values 
-let arrayX = [1,2,3,4]; 
-let arrayY = ["1","2", 3,4];      
-let arrayZ = [1,null,2,3]
-let arrayW = [1,2,3,undefined];
-let arrayT = [1,2,3,4]; // for True 
 
-console.log(assertArraysEqual(arrayX, arrayY)); // false please, fail ALL PASSED!!!
-console.log(assertArraysEqual(eqArrays(arrayX, arrayZ)));// false
-console.log(assertArraysEqual(eqArrays(arrayX, arrayW)));//false
-console.log(assertArraysEqual(eqArrays(arrayX, arrayT)));//true 
+const arr = [0,1,1,1];
+const arr2 = [0,1,1,1];
+assertArraysEqualTest(assertArraysEqual(arr, arr2)); 
 
 module.exports = assertArraysEqual;

@@ -1,11 +1,4 @@
-const assertEqual = function(actual, expected) { // testing 1st cond is t/f
-  if (actual === expected) {
-    console.log(`Assertion Passed: ${actual} === ${expected} ✅`);
-  } else {
-    (actual !== expected);
-    console.log(`Assertion Failed: ${actual} !== ${expected} 😿`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 function countLetters(string) { //input given string
   let letters = string.split(""); //split.method()
@@ -24,5 +17,14 @@ function countLetters(string) { //input given string
 const letters = "lowtided";
 console.log(countLetters(letters));
 //expected output (l: 1, o: 1, w: 1, t: 1, i: 1, d: 2, e: 1);
+const letters1 = "lowtided";
+
+//test 
+const ltr = "lowered"; 
+assertEqual(countLetters(letters, ltr)); //fail
+
+assertEqual(countLetters(letters, letters1)); //pass
+//failed?!?
+
 
 module.exports = countLetters;
