@@ -12,4 +12,4 @@ console.log(assertArraysEqual((arrayX, arrayZ)));// false
 console.log(eqArrays(arrayX, arrayW));//false
 console.log(eqArrays(arrayX, arrayT));//true 
 
-module.export = assertArraysEqual;
+// module.export = assertArraysEqual;

@@ -17,4 +17,4 @@ describe('#tail', function () {
   });
 });
 
-module.export = tailTest;
+// module.export = tailTest;

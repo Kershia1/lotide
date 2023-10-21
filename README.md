@@ -12,12 +12,12 @@ This project was created and published by me as part of my learnings at Lighthou
 
 **Install it:**
 
-`npm install @Kershia1/lotide`
+`npm install @d.ingram/lotide`
 
 **Require it:**
 
 `function
- _ = require('@Kershia1/lotide');`
+ _ = require('@d.ingram/lotide');`
 
 **Call it:**
 

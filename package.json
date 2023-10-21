@@ -1,13 +1,13 @@
 {
   "name": "@d.ingram/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lotide",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha './test/*.js'"
   },
   "repository": {
     "type": "git",

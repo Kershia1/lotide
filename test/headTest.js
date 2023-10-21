@@ -25,4 +25,4 @@ it("returns '5' for ['8']", () => {
 // assertEqual(head([""]),4);//"" !== 4 fail
 // assertEqual(head(["Omnomnom",7,9]),9);//"Omnomnom" !== 9 
 
-module.export = headTest;
+// module.export = headTest;

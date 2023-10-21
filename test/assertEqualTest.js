@@ -7,4 +7,4 @@ console.log(assertEqual("Lighthouse Labs", "Webinar")); // fail
 console.log(assertEqual(1, 1)); // pass
 console.log(assertEqual(1, 3)); // fail
 
-module.exports = assertEqualTest;
+// module.exports = assertEqualTest;
