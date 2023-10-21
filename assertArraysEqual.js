@@ -1,4 +1,4 @@
-const assertArraysEqualTest  = require('../assertArraysEqualTest');
+const eqArrays  = require('./eqArrays');
 
 // try refactoring all equal to check every avaliable input from the array to get a t or f va
 
@@ -20,6 +20,6 @@ const assertArraysEqual = (arr1, arr2) => {
 
 const arr = [0,1,1,1];
 const arr2 = [0,1,1,1];
-assertArraysEqualTest(assertArraysEqual(arr, arr2)); 
+assertArraysEqualeq(eqArrays(arr, arr2), true); 
 
 module.exports = assertArraysEqual;
