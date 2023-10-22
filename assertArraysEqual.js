@@ -10,10 +10,10 @@ console.log("These arrays are not an absolute match! ❌")
 }
 // test values 
 
-assertArraysEqual(([1, 2, 3], [1, 2, 3]), true); // => should PASS "These arrays are absolutely equal! 🥳"
-assertArraysEqual(([1, 2, 3], [1, 2]), false); // => should FAIL arr.length !== @index [2] "These arrays are not an absolute match! ❌"
-assertArraysEqual(([1, 2, 3], [1, , 3]), false); // => should FAIL undefined @ index [1] "These arrays are not an absolute match! ❌"
-assertArraysEqual(([1, 2, 3], [1, 2, "k"]), false); // => should FAIL string "k" vs integer @ index[2] "These arrays are not an absolute match! ❌"
-assertArraysEqual((["1", 2, 3], [1, 2, 3]), ); // => should FAIL string "1" vs integer @ index[2] testing for implied corecion. "These arrays are not an absolute match! ❌"
+// assertArraysEqual(([1, 2, 3], [1, 2, 3]), true); // => should PASS "These arrays are absolutely equal! 🥳"
+// assertArraysEqual(([1, 2, 3], [1, 2]), false); // => should FAIL arr.length !== @index [2] "These arrays are not an absolute match! ❌"
+// assertArraysEqual(([1, 2, 3], [1, , 3]), false); // => should FAIL undefined @ index [1] "These arrays are not an absolute match! ❌"
+// assertArraysEqual(([1, 2, 3], [1, 2, "k"]), false); // => should FAIL string "k" vs integer @ index[2] "These arrays are not an absolute match! ❌"
+// assertArraysEqual((["1", 2, 3], [1, 2, 3]), ); // => should FAIL string "1" vs integer @ index[2] testing for implied corecion. "These arrays are not an absolute match! ❌"
 
 module.exports = assertArraysEqual;
