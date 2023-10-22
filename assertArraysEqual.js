@@ -1,25 +1,19 @@
 const eqArrays  = require('./eqArrays');
 
-// try refactoring all equal to check every avaliable input from the array to get a t or f va
-
-// const assertArraysEqual = (arrs) => arrs.every(a => b === arrs[0]);
 //returning to original function
 const assertArraysEqual = (arr1, arr2) => {
-  if(arr1.length !== arr2.length) {
-    return false;
-  }
-
-  for(let i = 0; i <arr1.length; i++) {
-    if(arr1[i] !== arr2[i]) {
-      return false
-    }
-  }
-  return true;
+if(eqArrays(arr1, arr2)) {
+  console.log("These arrays are absolutely equal! 🥳")
+}else{
+console.log("These arrays are not an absolute match! ❌")
+}
 }
 // test values 
 
-const arr = [0,1,1,1];
-const arr2 = [0,1,1,1];
-assertArraysEqual(eqArrays(arr, arr2), true); 
+assertArraysEqual(([1, 2, 3], [1, 2, 3]), true); // => should PASS "These arrays are absolutely equal! 🥳"
+assertArraysEqual(([1, 2, 3], [1, 2]), false); // => should FAIL arr.length !== @index [2] "These arrays are not an absolute match! ❌"
+assertArraysEqual(([1, 2, 3], [1, , 3]), false); // => should FAIL undefined @ index [1] "These arrays are not an absolute match! ❌"
+assertArraysEqual(([1, 2, 3], [1, 2, "k"]), false); // => should FAIL string "k" vs integer @ index[2] "These arrays are not an absolute match! ❌"
+assertArraysEqual((["1", 2, 3], [1, 2, 3]), ); // => should FAIL string "1" vs integer @ index[2] testing for implied corecion. "These arrays are not an absolute match! ❌"
 
 module.exports = assertArraysEqual;
