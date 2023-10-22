@@ -6,11 +6,10 @@ function findKey(object, callback) {
     if(object.hasOwnProperty(key) && callback(object[key])) { //are there keys
       return key; //if there are return
     }
+    return callback;
   }
   return undefined; //if not nothing to return
 };
-
-// console.log(findKey);
 
   const result = findKey({
   "Blue Hill": { stars: 1 },
@@ -21,11 +20,11 @@ function findKey(object, callback) {
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2) // => "noma"
 
-const callback = (x) => {
+callback = (x) => {
   return (result, callback)
 };
 
-assertEqual(findKey(result, "noma"), "noma"); // "noma"
+assertEqual(findKey(result, "noma"), true, "noma"); // "noma"
   
 const testObject = {
   a: 1,

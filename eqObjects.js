@@ -1,13 +1,6 @@
-const eqArrays = (a, b) =>
-  a.length === b.length && a.every((element, index) => element === b[index]);
+const eqArrays = require('./eqArrays');
 
-const assertEqual = function (actual, expected){
-  if (actual === expected) {
-    console.log(`Assertion Passed: ${actual} === ${expected} ✅`);
-  } else { //( actual !== expected), unecessary rep
-    console.log(`Assertion Failed: ${actual} !== ${expected} 😿`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 //Are the objects equal
 const eqObjects = function (object1, object2){

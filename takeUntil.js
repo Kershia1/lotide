@@ -1,24 +1,7 @@
 // this is wrong and needs to be refactored or just re-written
-const assertArraysEqual = (a, b) => {
-  if (a.length !== b.length) {
-    return false;
-  } else {
-    for (let i = 0; i < a.length; i++) {
-      if (a[i] !== b[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 const array1 = ["I've", "never", "been", "to", "California", ";but,", "I've been", "to", "Washington", "State", "many", "times"];
-
-/*
- * @param {*} array 
- * @param {*} callback 
- * @returns 
- */
 
 const takeUntil = function (array,callback) {
   const outcome = []; // empty array to push to 

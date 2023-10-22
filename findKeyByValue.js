@@ -1,10 +1,5 @@
-const assertEqual = function (actual, expected) { // testing 1st cond is t/f
-  if (actual === expected) {
-    console.log(`Assertion Passed: ${actual} === ${expected} ✅`);
-  } else { //( actual !== expected), unecessary rep
-    console.log(`Assertion Failed: ${actual} !== ${expected} 😿`);
-  } 
-};
+const assertEqual = require('./assertEqual');
+
 // try generic obj and value?, use .hasOwnPropertyMethod, not [key]
 const findKeyByValue=(object, value)=>{ //object, value para's
   for (let property in object) { // iterate obj properties

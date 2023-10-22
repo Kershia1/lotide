@@ -1,18 +1,5 @@
-//step 1
-const assertArraysEqual = (a, b) => {
-  if (a.length !== b.length) {
-    return false;
-  } else {
-    for (let i = 0; i < a.length; i++) {
-      if (a[i] !== b[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
-const eqArrays = (a, b) =>
-  a.length === b.length && a.every((element, index) => element === b[index]);
+
+const assertArraysEqual = require('./assertArraysEqual');
 
 // step 2 a Implement
 const sentence = "hello";

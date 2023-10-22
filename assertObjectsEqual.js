@@ -1,5 +1,4 @@
 //test to determine if given arrays are equal or not
-const eqArrays = require('./eqArrays'); 
 const eqObjects = require('./eqObjects');
 
 // Test to compare objects if they are absolutely equal or not.
