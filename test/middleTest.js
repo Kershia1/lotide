@@ -19,4 +19,4 @@ describe('#middle', function () {
   
 });
 
-// module.export = middleTest;
+module.export = middleTest;
