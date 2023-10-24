@@ -1,6 +1,4 @@
 //Step 2 Middle will use Math.floor(arr.length /2); find the exact middle by finding the excat integer and rounding down
-let arr = [1, 2, 3, 4];
-
 const middle = (arr) => {
   let mid = Math.floor((arr.length) / 2);
   if (arr.length % 2 === 0 && arr.length > 3) {

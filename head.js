@@ -1,5 +1,5 @@
 const assertEqual = require('./assertEqual');
-const headTest = require('../headTest');
+// const headTest = require('../headTest');
 
 
 const head = function(array){
@@ -14,6 +14,6 @@ const head = function(array){
 // assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");//Hello === Hello pass
 // assertEqual(head([""]),4);//"" !== 4 fail
 assertEqual(head(["Omnomnom",7,9]),9);//"Omnomnom" !== 9 
-headTest(head(["Omnomnom",7,9]),9); //fail
+assertEqual(head(["Omnomnom",7,9]),"Omnomnom"); //pass
 
 module.exports = head;
