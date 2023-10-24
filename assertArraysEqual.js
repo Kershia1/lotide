@@ -2,17 +2,17 @@ const eqArrays  = require('./eqArrays');
 
 //returning to original function
 const assertArraysEqual = (arr1, arr2) => {
-if(eqArrays(arr1, arr2)) { // undefined error located here
-  console.log("These arrays are absolutely equal! 🥳")
-}else{
-console.log("These arrays are not an absolute match! ❌")
-}
+if (eqArrays(arr1, arr2)) { // undefined error located here
+  console.log("These arrays are absolutely equal! 🥳");
+} else {
+console.log("These arrays are not an absolute match! ❌");
+  }
 };
 
 const arr1 = [5,6,7,8];
 const arr2 = [5,6,7,8];
 
-console.log(assertArraysEqual(arr1, arr2));
+assertArraysEqual(arr1, arr2);
 
 // test values 
 
