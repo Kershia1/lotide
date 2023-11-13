@@ -12,11 +12,11 @@ describe('#middle', function () {
 
   it('should return [2, 3] for an input of [1, 2, 3, 4]', function () {
     const input = [1, 2, 3, 4];
-    const expected = [2];
+    const expected = [2, 3];
     assert.deepEqual(middle(input), expected);
   });
 
   
 });
 
-// module.export = middleTest;
+// module.exports = {middleTest};

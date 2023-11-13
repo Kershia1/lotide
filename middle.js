@@ -3,11 +3,18 @@ const middle = (arr) => {
   let mid = Math.floor((arr.length) / 2);
   if (arr.length % 2 === 0 && arr.length > 3) {
     return [arr[mid - 1], arr[mid]];// 2 middle less 1 from middle and mid value s
-  } else if  (arr.length % 2 === 0 && arr.length <= 3) {
-    return [arr[mid]];
-} else { (arr.length < 3)
-return [arr];
+  } else if  (arr.length % 2 === 0 && arr.length < 4) {
+    return arr.slice(mid, mid + 1);
+} else { (arr.length === 3)
+  //return arr only at index[1] middle of 3 element array
+  return [arr[mid]];
   }
 };
 
 module.exports = middle;
+
+/*
+commit msg notes fix length measurement of arrays
+return is wrong, fixed export typos and add {} to denote it is an object.
+
+*/
