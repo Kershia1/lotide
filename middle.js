@@ -12,9 +12,3 @@ const middle = (arr) => {
 };
 
 module.exports = middle;
-
-/*
-commit msg notes fix length measurement of arrays
-return is wrong, fixed export typos and add {} to denote it is an object.
-
-*/
