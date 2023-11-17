@@ -31,8 +31,8 @@ assertEqual(words.length, 3);
 const words1 = ["Yo Yo", "Lighthouse", "Labs"];
 const words1Result = tail(words1);
 //Expected output: Assertion Passed: 3 === 3 ✅
-assertEqual(words1Result.length[0], words1.length[1]);
-//Expected output: Assertion Passed: undefined === undefined ✅
+assertEqual(words1Result.length[0], words1[1]);
+//Expected output: Assertion Failed: undefined !== Lighthouse 😿
 
 // Test Case: Check the new Array
 const words2 = ["Hello"];
