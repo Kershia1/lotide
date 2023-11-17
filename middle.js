@@ -2,7 +2,7 @@
 // if less than 3 it shall return an empty array
 
 const middle = (arr) => {
-  if (arr.length < 3) {
+  if (arr.length <= 2) {
     return [];
   } else {
     let mid = Math.floor((arr.length) / 2);
