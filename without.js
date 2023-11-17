@@ -1,6 +1,7 @@
 const assertArraysEqual = require('./assertArraysEqual');
 
 //Returns a subset of a given array, removing unwanted elements.
+// with any elements present in the second array removed.
 
 function without(array, toRemove) {
   const newArray = [];
