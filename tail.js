@@ -4,8 +4,11 @@
 Returns the "tail" of an array: everything except for the first item (head) of the provided array.
 */
 const tail = function(array) {
-  let results = [];
-return results.push(array.slice(1));
+  if( array <= 1) {
+    return [];
+  } else {
+    return array.slice(1);
+  }
 };
 
 const assertEqual = function(actual, expected) {
@@ -18,24 +21,30 @@ const assertEqual = function(actual, expected) {
 };
 
 //Assertion Tests:
-//comparing the array.length
 
-// Test Case: Check the original array 
-// const words = ["Yo Yo", "Lighthouse", "Labs"];
-// tail(words);
-// assertEqual(words.length, 3);
+// Test Case: Check the original array is not mutated 
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+tail(words);
+assertEqual(words.length, 3);
 
-// Test Case: Check the original array 
-const results1 = tail(["Hello"]); 
-assertEqual(results1.length, 0);
+//Check 1st element of the returned array matches the 2ed element of the original 
+const words1 = ["Yo Yo", "Lighthouse", "Labs"];
+const words1Result = tail(words1);
+assertEqual(words1Result[0], words1[1]);
+
+// Test Case: Check the new Array
+const words2 = ["Hello"];
+const words2Result = tail(["Hello"]); 
+assertEqual((words2Result[0], words2[1]));
 //Expected output: []
 
-const results2 = tail([]); 
-assertEqual(results2.length, 0);
+const words3 = [];
+const words3Result = tail([]); 
+assertEqual((words3Result[0], words3[1]));
 //Expected output: []
 
 
-const results3 = tail(["Yo Yo", "Lighthouse", "Labs"]);
-assertEqual((results3.length), 2);
+// const results3 = tail(["Yo Yo", "Lighthouse", "Labs"]);
+// assertEqual((results3.length), 2);
 
 module.exports = tail;
