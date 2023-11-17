@@ -20,11 +20,11 @@ const flatten = (nestedArray) => {
 const nestedArray1 = [1, 5, 6, 3, 4, 8, [9, 0]];
 const flattenedArray1 = flatten(nestedArray1);
 assertArraysEqual(flattenedArray1, [1, 5, 6, 3, 4, 8, 9, 0]);
-//"These arrays are absolutely equal! 🥳"
+//Expected output: "These arrays are absolutely equal! 🥳"
 
 const nestedArray2 = [1, 2, 3, [4, 5, 6], 7, 8, 9]; // simple to depth 1
 const flattenedArray2 = (flatten(nestedArray2)); //[1, 2, 3, 4, 5, 6, 7, 8, 9]
 assertArraysEqual(flattenedArray2, [1, 2, 3, 4, 5, 6, 7, 8, 9]);
-//"These arrays are absolutely equal! 🥳"
+//Expected output: "These arrays are absolutely equal! 🥳"
 
 module.exports = flatten;

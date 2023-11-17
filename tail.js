@@ -1,11 +1,13 @@
-const tail = function(array) { //generic array
-  const newTail = [];
-  newTail.push(...array.slice((1))); //return everything@ 2ed element found
-  return newTail; //prevents original tail from becoming mutated
+/* 
+Returns the "tail" of an array: everything except for the first item (head) of the provided array.
+*/
+const tail = function(array) {
+ const newTail = array.slice(1);
+  return newTail;
 };
 
-const assertEqual = function(actual, expected) { // testing 1st cond is t/f
-  if (actual === expected) { // only tail i to compare as A and E
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
     console.log(`Assertion Passed: ${actual} === ${expected} ✅`);
   } else {
    if (actual !== expected)
@@ -13,11 +15,12 @@ const assertEqual = function(actual, expected) { // testing 1st cond is t/f
   }
 };
 
-// Test values 
-//after strings are stringified then compare that the correct elements at the end of the given strings is returned. 
+//Assertion Tests:
 
 const result = tail(["Hello", "Lighthouse", "Labs"]); //test array
-assertEqual(result, ["Labs"]); //fail
+(assertEqual(result, ["Labs"]));
+//Expected output:
+
 assertEqual(result, ["Lighthouse", "Labs"]);//pass
 
 const result1 = tail(["Hello"]);

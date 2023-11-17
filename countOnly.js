@@ -1,21 +1,22 @@
 const assertEqual = require('./assertEqual'); 
 
-// allItems: arr of strings to iterate through
-//itemsToCount: obj specifying what to count
-const countOnly = function (allItems, itemsToCount) { // declared func, step 1
-  const results = {}; //empty object literal
+//Count all the strings found in the input array, and their respective counts.
+//Returned as an object to better interpert the returned data.
+const countOnly = function (allItems, itemsToCount) {
+  const results = {};
 
-  for (const item of allItems) { // count everything
-    if (itemsToCount[item]) { // comparing each value to the key "item"
+  for (const item of allItems) {
+    if (itemsToCount[item]) {
       if (results[item]) {
-        results[item] += 1; // allows it to iterate an additonal value.
+        results[item] += 1;
       } else {
-        results[item] = 1; // returns result
+        results[item] = 1;
       }
     }
   }
-  return results; // what will be finally printed after looping through the given parameters
+  return results;
 };
+
 const firstNames = [
   "Karl",
   "Salima",
@@ -24,14 +25,21 @@ const firstNames = [
   "Kavith",
   "Jason",
   "Salima",
-  "Fang", // rep will only return this one, stack rule 1st in last out
+  "Fang",
   "Joe"
 ];
+
+//Test Cases:
+
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
-console.log(assertEqual(result1["Jason"], 1)); // dosen't exist,no return
-console.log(assertEqual(result1["Karima"], undefined)); // ""
-console.log(assertEqual(result1["Fang"], 2)); // returns 2 with += opperator
-console.log(assertEqual(result1["Agouhanna"], undefined)); // loop skips due toundefined even though included
+(assertEqual(result1["Jason"], 1));
+//expected output passed
+(assertEqual(result1["Karima"], undefined));
+//expected output passed
+(assertEqual(result1["Fang"], 2));
+//expected output passed
+(assertEqual(result1["Agouhanna"], 3));
+//expected output fail 
 
 module.exports = countOnly;

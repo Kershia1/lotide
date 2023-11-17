@@ -1,5 +1,8 @@
 const assertEqual = require('./assertEqual');
 
+/*findKey takes in an object and a callback; returns the first key for which the callback returns a truthy value. If no key is found, then it should return undefined.
+*/
+
 const findKey = function(object, callback) {
   for (let key in object) {
     if (callback(object[key])) {

@@ -35,6 +35,4 @@ module.exports = {
   tail, 
   without
 }; 
-
-
-module.exports = index.js;
+// module.exports = {index.js};

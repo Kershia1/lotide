@@ -22,9 +22,18 @@ findKeyByValue(bestTVShowsByGenre, "The Wire");
 
 //Assertion Tests:
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama"); // pass
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), "sciFi"); //pass
-assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy");//pass
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That 70s Show"), "humor");//fail
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "historical"); //fail
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+//Expected output: Assertion Passed: drama === drama ✅
+
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), "sciFi");
+//Expected output: Assertion Passed: sciFi === sciFi ✅
+
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy");
+//Expected output: Assertion Passed: comedy === comedy ✅
+
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That 70s Show"), "humor");
+//Expected output: Assertion Failed: undefined !== humor 😿
+
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "historical"); //Expected output: Assertion Failed: drama !== historical 😿
+
 module.exports = findKeyByValue;
