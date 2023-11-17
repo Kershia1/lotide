@@ -13,22 +13,4 @@ const middle = (arr) => {
   return [arr[mid]];
 };
 
-//Test Variable and Cases
-const arr1 = [1,2,3];//2 returns undefined
-const arr2 = [1,2,3,4]; //3,4 returns undefined
-const arr3 = [1,2]; // []
-const arr4 = [1,2,3,4,5,6,7,8,9];
-const arr5 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
-
-console.log(middle(arr1)); 
-//expected output [2]
-console.log(middle(arr2));
-//expected output [2,3]
-console.log(middle(arr3));
-//expected output []
-console.log(middle(arr4));
-//expected output [5]
-console.log(middle(arr5));
-//expected output [7,8]
-
 module.exports = middle;
