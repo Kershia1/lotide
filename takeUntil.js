@@ -27,7 +27,7 @@ const results = takeUntil(data, x => x === ";but,");
 const desiredResults = ["I've", "never", "been", "to", "California"];
 assertArraysEqual(results, desiredResults);
 /* Expected output: These arrays are absolutely equal! 🥳
-[ "I've", 'never', 'been', 'to', 'California' ] [ "I've", 'never', 'been', 'to', 'California', ';but,' ]
+[ "I've", 'never', 'been', 'to', 'California' ] [ "I've", 'never', 'been', 'to', 'California']
 */
 console.log('Test Case 1: ',results);
 
