@@ -4,10 +4,8 @@
 Returns the "tail" of an array: everything except for the first item (head) of the provided array.
 */
 const tail = function(array) {
-let results = [];
- const newTail = array.slice(1);
- results.push(newTail);
-  return results;
+  let results = [];
+return results.push(array.slice(1));
 };
 
 const assertEqual = function(actual, expected) {
@@ -23,22 +21,21 @@ const assertEqual = function(actual, expected) {
 //comparing the array.length
 
 // Test Case: Check the original array 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
+// const words = ["Yo Yo", "Lighthouse", "Labs"];
+// tail(words);
+// assertEqual(words.length, 3);
 
 // Test Case: Check the original array 
-const words1 = tail(["Hello"]); 
-assertEqual(words1.length, 0);
+const results1 = tail(["Hello"]); 
+assertEqual(results1.length, 0);
 //Expected output: []
 
-const words2 = tail([]); 
-assertEqual(words2.length, 0);
+const results2 = tail([]); 
+assertEqual(results2.length, 0);
 //Expected output: []
 
 
-const words3 = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words3.length, 2);
+const results3 = tail(["Yo Yo", "Lighthouse", "Labs"]);
+assertEqual((results3.length), 2);
 
 module.exports = tail;
