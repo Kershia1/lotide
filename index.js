@@ -34,5 +34,4 @@ module.exports = {
   takeUntil,
   tail, 
   without
-}; 
-// module.exports = {index.js};
+};
