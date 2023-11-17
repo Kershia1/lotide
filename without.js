@@ -12,11 +12,22 @@ function without(array, toRemove) {
   return newArray;
 }
 
+//Check to ensure original Array is not modified:
+const originalArray = [1, 2, 3];
+console.log("Mutataion Test: ", without(originalArray, [1]));
+//Expected output: [2, 3]
+assertArraysEqual(originalArray, [1, 2, 3]);
+// should pass if originalArray was not modified
+
+console.log('----');
+
 //Test Cases:
-console.log("Test Case 1: ", without([1, 2, 3], [1]));
+console.log("Test Case 1: ");
+console.log(without([1, 2, 3], [1]));
 //Expected output: [2, 3]
 
-console.log("Test Case 2: ", without(["1", "2", "3"], [1, 2, "3"]));
+console.log("Test Case 2: ",);
+console.log(without(["1", "2", "3"], [1, 2, "3"]));
 // Expected output:["1", "2"]
 
 console.log('----');
