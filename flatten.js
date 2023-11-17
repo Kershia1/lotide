@@ -1,6 +1,8 @@
 const assertArraysEqual = require('./assertArraysEqual');
 
-const flatten = () => {
+//A function flatten which will take in an array containing elements including nested arrays of elements, and return a "flattened" version of the array.
+
+const flatten = (nestedArray) => {
   const flattenedArray = [];
   for (let i = 0; i < nestedArray.length; i++) {
     if (Array.isArray(nestedArray[i])) {
@@ -14,24 +16,15 @@ const flatten = () => {
 
 //Test Cases:
 
-const nestedArray = [1, 2, 3, [4, 5, 6], 7, 8, 9]; // simple to depth 1
-console.log(flatten(nestedArray)); //[1, 2, 3, 4, 5, 6, 7, 8, 9]
-//"These arrays are absolutely equal! 🥳"
-
 //Tests
 const nestedArray1 = [1, 5, 6, 3, 4, 8, [9, 0]];
 const flattenedArray1 = flatten(nestedArray1);
-assertArraysEqual(flattenedArray1, [1, 5, 6, 3, 4, 8, 9, 0]);
+assertArraysEqual(flattenedArray1, [1, 5, [6], 3, 4, 8, 9, 0]);
 // => These arrays are not an absolute match! ❌
 
-const nestedArray2 = [3, 51, 5, 6, 3, 4, [8, 9, 0]];
-const flattenedArray2 = flatten(nestedArray2);
-assertArraysEqual(flattenedArray2, [3, 51, 5, 6, 3, 4, 8, 9, 0]);
-// => These arrays are not an absolute match! ❌
-
-const nestedArray3 = [3, 51, 5, 6, 3, 4, [8, [9, 0]]];
-const flattenedArray3 = flatten(nestedArray3);
-assertArraysEqual(flattenedArray3, [[3, 51, [5, [6]]], 3, 4, 8, 9, 0]);
-// => These arrays are not an absolute match! ❌
+const nestedArray2 = [1, 2, 3, [4, 5, 6], 7, 8, 9]; // simple to depth 1
+const flattenedArray2 = (flatten(nestedArray2)); //[1, 2, 3, 4, 5, 6, 7, 8, 9]
+assertArraysEqual(flattenedArray2, [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+//"These arrays are absolutely equal! 🥳"
 
 module.exports = flatten;
