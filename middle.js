@@ -5,9 +5,12 @@ const middle = (arr) => {
     return [arr[mid - 1], arr[mid]];// 2 middle less 1 from middle and mid value s
   } else if  (arr.length % 2 === 0 && arr.length < 4) {
     return arr.slice(mid, mid + 1);
-} else { (arr.length === 3)
+  } else if (arr.length === 3) {
   //return arr only at index[1] middle of 3 element array
-  return [arr[mid]];
+    return [arr[mid]];
+  } else {
+    (arr.length < 3);
+    return [];
   }
 };
 
