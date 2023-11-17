@@ -6,14 +6,15 @@ Collect's items from a provided array until the callback provided returns a trut
 */
 
 const takeUntil = function (array,callback) {
-  const outcome = []; // empty array to push to 
+  const outcome = [];
   for ( const entry of array) { 
-    if (callback(entry)=== false) {
+    if (callback(entry) === false) {
     outcome.push(entry);
    }else{
     return outcome;
     }
   }
+  return outcome;
 };
 
 //Test Cases:
