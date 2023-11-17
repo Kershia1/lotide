@@ -1,30 +1,28 @@
 const assertEqual = require('./assertEqual');
 
-function countLetters(string) { //input given string
-  let letters = string.split(""); //split.method()
-  let obj = {}; // empty point for obj ref
-  letters.forEach(function(x) { // assess ea element seperatly 
-    let count = 0;//start at 0 for each element
-    for (let i = 0; i < letters.length; i++) {// work across witdth of string
-      if (x === letters[i]) {
-        count ++;//for each element counted add to output
-      }
+function countLetters(string) {
+  let letters = string.split("");
+  let obj = {};
+  letters.forEach(function(x) {
+    if(obj[x]) {
+      obj[x]++;
+    } else {
+      obj[x] = 1;
     }
-    obj[x]; //element is occuring and how manytimes 
   });
-  return obj; //return total value after completed cycle of loop
+  return obj;
 }
 const letters = "lowtided";
+//test output
+
 console.log(countLetters(letters));
 //expected output (l: 1, o: 1, w: 1, t: 1, i: 1, d: 2, e: 1);
-const letters1 = "lowtided";
 
-//test 
-const ltr = "lowered"; 
-assertEqual(countLetters(letters, ltr)); //fail
+const letters1 = "missippi";
+//expected output (m:1, i:3, s:2, p:2)
 
-assertEqual(countLetters(letters, letters1)); //pass
-//failed?!?
+assertEqual(countLetters(letters).d, 2); //pass 
 
+assertEqual(countLetters(letters1).i, 3); //pass
 
 module.exports = countLetters;
