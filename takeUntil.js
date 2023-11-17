@@ -1,5 +1,9 @@
-// this is wrong and needs to be refactored or just re-written
+
 const assertArraysEqual = require('./assertArraysEqual');
+
+/* 
+Collect's items from a provided array until the callback provided returns a truthy value.
+*/
 
 const takeUntil = function (array,callback) {
   const outcome = []; // empty array to push to 
@@ -11,6 +15,8 @@ const takeUntil = function (array,callback) {
     }
   }
 };
+
+//Test Cases:
 
 const data = ["I've", "never", "been", "to", "California", ";but,", "I've been", "to", "Washington", "State", "many", "times"];
 const results = takeUntil(data, x => x < 0);
@@ -31,6 +37,9 @@ const results3 = takeUntil(data3, x => x < 0);
 console.log(results3);
 
 assertArraysEqual(results1, results2); //fail 
+//Expected output: 
+
 assertArraysEqual(results, results3); //pass
+//Expected output: 
 
 module.exports = takeUntil;
