@@ -6,7 +6,7 @@ A mini clone of the [Lodash](https://lodash.com) library.
 
 **_BEWARE:_ This library was published for learning purposes. It is _not_ intended for use in production-grade software. It is admittedly very buggy.**
 
-This project was created and published by me as part of my learnings at Lighthouse Labs. I plan to comeback in a few months to refactor this library for practice.
+This project was created and published by me as part of my learnings at Lighthouse Labs. I have retuned to extensively de-bug and imporve functionality for this program. Please not if previous commits on gihub are used, the comments must be read to understand what bugs or errors were still present. For fellow students I highly encourage you to read the commit history and notes to see what an interative learning expereince looks like. 
 
 ## Usage
 
