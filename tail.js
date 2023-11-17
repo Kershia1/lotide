@@ -1,9 +1,13 @@
+//const assertArraysEqual = require('./assertArraysEqual');
+
 /* 
 Returns the "tail" of an array: everything except for the first item (head) of the provided array.
 */
 const tail = function(array) {
+let results = [];
  const newTail = array.slice(1);
-  return newTail;
+ results.push(newTail);
+  return results;
 };
 
 const assertEqual = function(actual, expected) {
@@ -16,17 +20,25 @@ const assertEqual = function(actual, expected) {
 };
 
 //Assertion Tests:
+//comparing the array.length
 
-const result = tail(["Hello", "Lighthouse", "Labs"]); //test array
-(assertEqual(result, ["Labs"]));
-//Expected output:
+// Test Case: Check the original array 
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+tail(words);
+assertEqual(words.length, 3);
 
-assertEqual(result, ["Lighthouse", "Labs"]);//pass
+// Test Case: Check the original array 
+const words1 = tail(["Hello"]); 
+assertEqual(words1.length, 0);
+//Expected output: []
 
-const result1 = tail(["Hello"]);
-assertEqual(result1, []);// should return an empty array no element 1. 
+const words2 = tail([]); 
+assertEqual(words2.length, 0);
+//Expected output: []
 
-const result2 = tail([]);
-assertEqual(result2, []); // Pass empty array returns empty array
+
+const words3 = ["Yo Yo", "Lighthouse", "Labs"];
+tail(words);
+assertEqual(words3.length, 2);
 
 module.exports = tail;
