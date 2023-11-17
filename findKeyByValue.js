@@ -1,30 +1,28 @@
 const assertEqual = require('./assertEqual');
 
-// try generic obj and value?, use .hasOwnPropertyMethod, not [key]
-const findKeyByValue=(object, value)=>{ //object, value para's
-  for (let property in object) { // iterate obj properties
-    // if (Object.hasOwnProperty(property)) { //check properties 
-      if (object[property] === value) { // if property of value matches key
-      //  return property;
-      console.log(`returning true key:, key`)
+const findKeyByValue = (object, value) => {
+  for (let property in object) {
+    if (object[property] === value) {
+      return property;
     }
   }
 };
 
+//Testing Object
+
 const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
+  sciFi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama: "The Wire"
 };
 
-callback = findKeyByValue(bestTVShowsByGenre, "The Wire"); 
-console.log(callback);
+findKeyByValue(bestTVShowsByGenre, "The Wire");
 
+//Assertion Tests:
 
-// console.log(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine")); // undefined
-
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire")); // pass
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse")); //pass
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That 70s Show" ));//fail
-
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama"); // pass
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), "sciFi"); //pass
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy");//pass
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That 70s Show"), "humor");//fail
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "historical"); //fail
 module.exports = findKeyByValue;
